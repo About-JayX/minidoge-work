@@ -14,7 +14,7 @@ const LANGUAGE = {
 function replaceVariables(message, data = {}) {
     return Object.entries(data).reduce(
         (msg, [key, value]) => msg.replace(`{${key}}`, value),
-        message
+        message 
     );
 }
 
