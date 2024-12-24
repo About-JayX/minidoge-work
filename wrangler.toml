@@ -1,0 +1,17 @@
+name = "minidoge-donation-tracker"
+main = "dist/worker.js"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+[[d1_databases]]
+binding = "DATABASE"
+database_name = "minidoge-donation-tracker-db"
+database_id = "f9e4f725-f645-40ba-82fc-0031174c5b74"
+
+[observability]
+[observability.logs]
+enabled = true
+
+# 定时任务配置
+[triggers]
+crons = ["*/20 * * * *"]  # 每20分钟执行重启

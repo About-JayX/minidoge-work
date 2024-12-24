@@ -1,0 +1,16 @@
+name = "minidoge-donation-tracker"
+main = "dist/worker.js"
+compatibility_date = "2024-01-20"
+
+[[d1_databases]]
+binding = "DATABASE"
+database_name = "minidoge-donation-tracker-db"
+database_id = "f9e4f725-f645-40ba-82fc-0031174c5b74"
+
+[observability]
+[observability.logs]
+enabled = true
+
+# 定时任务配置
+[triggers]
+crons = ["*/1 * * * *"]  # 每分钟执行一次
